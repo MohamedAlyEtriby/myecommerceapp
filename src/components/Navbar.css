@@ -1,0 +1,40 @@
+/*  */
+@media screen and (min-width: 800px) {
+  .bar {
+    width: 100%;
+    display: flex !important;
+    justify-content: space-between !important;
+    
+  }
+  .navbar {
+    height: 70px !important;
+  }
+  .navlinks {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .thesora {
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .thesora {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 55px;
+    height: 55px;
+  }
+  .thesora img {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+.mynav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 4049494 !important;
+opacity: 0.9;
+}
