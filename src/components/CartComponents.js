@@ -2,6 +2,7 @@ import React from "react";
 import "./CartComponents.css";
 import { useContext } from "react";
 import { mycontext } from "../context/context";
+import { Delete } from "@mui/icons-material";
 const CartComponents = ({ title, price, image, id, del }) => {
   const { mycart, setcart, cartnuma, cartnumb, cartnumm, setcartnum } =
     useContext(mycontext);
@@ -40,35 +41,36 @@ const CartComponents = ({ title, price, image, id, del }) => {
         <div>{title}</div>
         <div>Price: $ {price * mycart[id].quantity}</div>
         <div className="quan">
-          <button
-            className="btn btn-secondary"
-            onClick={() => {
-              addquan(id);
-              cartnuma();
-            }}
-          >
-            Add
-          </button>
-          <span>{mycart[id].quantity}</span>
+   
           <button
             onClick={() => {
               subquan(id, del);
               cartnumb();
             }}
-            className="btn btn-secondary"
+            className="btn"
           >
-            sub
+            -
+          </button>
+          <span>{mycart[id].quantity}</span>
+          <button
+            className="btn "
+            onClick={() => {
+              addquan(id);
+              cartnuma();
+            }}
+          >
+           +
           </button>
         </div>
       </div>
       <div className="addor">
         <button
-          className="btn btn-dark"
+          className="btn "
           onClick={() => {
             delitem(del);
           }}
         >
-          Del
+          <Delete/>
         </button>
       </div>
     </div>

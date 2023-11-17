@@ -12,6 +12,7 @@ import Food from "../components/Food";
 import { useContext } from "react";
 import { mycontext } from "../context/context";
 import Cart from "../components/Cart";
+import Footer from "../components/Footer";
 function Home() {
   const { carton } = useContext(mycontext);
   const [pro, setpro] = useState([...products]);
@@ -41,7 +42,7 @@ function Home() {
   return (
     <div>
       {carton && <Cart />}
-      <div className="container heroo">
+      <div className="container heroo ">
         <div className="row ">
           <div className="col-md-6 sora col-12">
             <img src={logo} alt="" />
@@ -138,6 +139,7 @@ function Home() {
           })}
         </div>
       </div>
+      {/* <Footer/> */}
     </div>
   );
 }

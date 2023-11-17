@@ -12,6 +12,7 @@ import Contextfirepro from "./context/firebasecon";
 import Login from "./pages/Loginn";
 import Protected from "./components/Protected";
 import Food from "./components/Food";
+import Footer from "./components/Footer";
 function App() {
   return (
     <div>
@@ -26,6 +27,9 @@ function App() {
                   <Protected>
                     <Navbar />
                     <Home />
+                    <div>
+                      <Footer/>
+                    </div>
                   </Protected>
                 </>
               }
@@ -37,6 +41,7 @@ function App() {
                   <Protected>
                     <Navbar />
                     <FoodPage />
+                    <Footer/>
                   </Protected>
                 </>
               }

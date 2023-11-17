@@ -12,6 +12,7 @@ function Navbar({ check }) {
   const signoutt = () => {
     signout().then((use) => {
       setuser("");
+      localStorage.removeItem("user")
     });
   };
   const { cartonoff, cartnumm } = useContext(mycontext);

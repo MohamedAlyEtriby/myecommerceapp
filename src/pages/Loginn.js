@@ -41,6 +41,8 @@ const Login = () => {
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              placeholder="Enter Your Email"
+
               onChange={(e) => {
                 setusername(e.target.value);
               }}
@@ -57,7 +59,7 @@ const Login = () => {
               type="password"
               class="form-control"
               id="exampleInputPassword1"
-              placeholder="Enter Your"
+              placeholder="Enter Your Password"
               onChange={(e) => {
                 setpasswo(e.target.value);
               }}

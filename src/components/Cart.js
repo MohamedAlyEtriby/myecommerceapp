@@ -28,7 +28,7 @@ const Cart = () => {
           <h2>NO ITEMS IN YOUR CART</h2>
         )}
         <div className="totalle">
-          <div>Total:{total}</div>
+          <div>Total : {total}</div>
         </div>
       </div>
     </div>

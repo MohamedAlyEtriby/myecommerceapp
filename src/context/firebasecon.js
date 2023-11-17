@@ -15,13 +15,16 @@ const Contextfirepro = ({ children }) => {
   const [user, setuser] = useState("");
   const navv = useNavigate();
   useEffect(() => {
-     onAuthStateChanged(auth, (userr) => {
+    onAuthStateChanged(auth, (userr) => {
       if (userr) {
-        setuser(userr);
         navv("/");
+        setuser(userr);
+        localStorage.setItem("user", userr); 
+      } else {
+        localStorage.removeItem("user");
       }
     });
-  }, []);
+  }, [user]);
   const register = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -29,6 +32,8 @@ const Contextfirepro = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
   const signout = () => {
+    localStorage.removeItem("user");
+
     return signOut(auth);
   };
   return (
